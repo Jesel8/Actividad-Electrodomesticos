@@ -36,7 +36,7 @@ public class Electrodomestico {
 
     }
 
-    //METODOS
+    //Logica del problema
 
     public int getPrecioBase() {
         return precioBase;
@@ -80,7 +80,7 @@ public class Electrodomestico {
 
 
     public int precioFinal() {
-        int adicional = 0; // Cambiado a 'adicional' para mayor claridad
+        int adicional = 0;
         switch (consumoEnergetico) {
             case 'A' -> adicional = 100;
             case 'B' -> adicional = 80;
@@ -98,7 +98,7 @@ public class Electrodomestico {
         } else if (this.peso >= 80) {
             adicional += 100;
         }
-        // La corrección clave: sumar el costo adicional al precio base.
+        // Se suuma el costo adicional al precio base.
         return this.precioBase + adicional;
     }
 
